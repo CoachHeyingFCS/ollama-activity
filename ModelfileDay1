@@ -1,0 +1,22 @@
+#This is a model file for a large language model.
+
+
+#--------SELECT YOUR LLM--------#
+#You can specify the model you want to use by uncommenting one of the lines below.
+#Make sure to only have one model line uncommented at a time.
+
+# LLM Created by Meta:
+FROM llama3.2:3b
+
+# LLM Created by Google:
+# FROM gemma2:2b
+# FROM gemma3:1b
+
+# LLM Created by Alibaba:
+# FROM qwen2.5:1.5b
+
+# LLM Created by Mistral AI (independent company):
+# FROM mistral-smallest:latest
+
+# LLM Created by TinyLlama (independent research company):
+# FROM tinyllama:latest

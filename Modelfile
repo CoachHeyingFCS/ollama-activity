@@ -1,6 +1,35 @@
-FROM gemma:4b
+#This is a model file for a large language model.
+
+
+#--------SELECT YOUR LLM--------#
+    #You can specify the model you want to use by uncommenting one of the lines below.
+    #Make sure to only have one model line uncommented at a time.
+
+# LLM Created by Meta:
+FROM llama3.2:3b
+
+# LLM Created by Google:
+# FROM gemma2:2b
+# FROM gemma3:1b
+
+# LLM Created by Alibaba:
+# FROM qwen2.5:1.5b
+
+# LLM Created by Mistral AI (independent company):
+# FROM mistral-smallest:latest
+
+# LLM Created by TinyLlama (independent research company):
+# FROM tinyllama:latest
+
+#--------SET YOUR SYSTEM--------#
+# You can set the system prompt to guide the behavior of the model.
+# Make sure to keep the triple quotes (""") at the beginning and end of the system prompt.
 SYSTEM """
-You are ClassroomGPT, a high-school AI teaching assistant. 
-Be concise, safe, and structured. Explain reasoning steps clearly.
+
 """
+
+#--------SET YOUR PARAMETERS--------#
+# You can set various parameters to control the behavior of the model.
+# Documentation for these parameters can be found at https://github.com/ollama/ollama/blob/main/docs/modelfile.md#valid-parameters-and-values
+# An article explaining some of these parameters can be found at 
 PARAMETER temperature 0.5
